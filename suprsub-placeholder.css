@@ -77,6 +77,14 @@ body {
 	background-color: rgba(0, 0, 0, 0.4);
 }
 
+#orbitHolder .orbit-caption a, #orbitHolder .orbit-caption a:visited {
+	color: #1BC01B;
+}
+
+#orbitHolder .orbit-caption a:hover {
+	color: #18a518;
+}
+
 .icon {
 	width: 100px;
 	margin-left: auto;
