@@ -2,7 +2,8 @@
   	font-family: "Collegiate";
   	font-weight: 400;
   	font-style: normal;
-  	src: url('/fonts/SF_Collegiate.ttf');
+  	src: url('/fonts/SF_Collegiate.eot');
+  	src: local("☺"), url('/fonts/SF_Collegiate.ttf') format('opentype');
 }
 
 #wrapper * {
@@ -19,7 +20,7 @@ body {
 	padding-top: 0.05em !important;
 	padding-bottom: 0.05em !important;
 	color: #fff !important;
-	text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+	text-shadow: rgba(0, 0, 0, .4) 2px 2px 2px, rgba(0, 0, 0, 0.2) -2px -2px 2px;	
 }
 
 .topBar {
@@ -105,7 +106,7 @@ body {
 }
 
 #contactBox {
-	color: #888;
+	color: #666;
 	border: 1px solid #888;
 }
 
