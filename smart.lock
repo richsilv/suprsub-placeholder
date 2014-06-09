@@ -2,19 +2,13 @@
   "meteor": {},
   "dependencies": {
     "basePackages": {
-      "foundation": {},
       "semantic-ui": {}
     },
     "packages": {
-      "foundation": {
-        "git": "https://github.com/ewall/meteor-foundation.git",
-        "tag": "v4.3.2",
-        "commit": "4cd0dc6ac5c69bf7477917a836d9078262d273a0"
-      },
       "semantic-ui": {
         "git": "https://github.com/nooitaf/meteor-semantic-ui.git",
-        "tag": "v0.12.0",
-        "commit": "ea58778393ec4cf509d44a7d8fb906549f46fce7"
+        "tag": "v0.17.0",
+        "commit": "820b4a05267733aa8124ba6ebc5b88eaf93361c4"
       }
     }
   }
