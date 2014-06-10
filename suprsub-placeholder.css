@@ -112,6 +112,14 @@ body {
 	display: block;
 }
 
+.iconPic {
+	height: 120px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 1em 0;
+	display: block;
+}
+
 .iconBox {
 	text-align: center;
 	color: rgb(51, 51, 50);
