@@ -59,17 +59,23 @@ if (Meteor.isClient) {
       });
     },
     'click #twitter-login': function() {
-      Meteor.loginWithTwitter({}, function() {
-        Meteor.setTimeout(function() {
-          $('.ui.modal').modal('hide');
-        }, 750);       
+      Meteor.loginWithTwitter({}, function(err, res) {
+        if (err) console.log(err);
+        else {
+          Meteor.setTimeout(function() {
+            $('.ui.modal').modal('hide');
+          }, 750);
+        }      
       });
     },
     'click #facebook-login': function() {
-      Meteor.loginWithFacebook({}, function() {
-        Meteor.setTimeout(function() {
-          $('.ui.modal').modal('hide');
-        }, 750);
+      Meteor.loginWithFacebook({}, function(err, res) {
+        if (err) console.log(err);
+        else {
+          Meteor.setTimeout(function() {
+            $('.ui.modal').modal('hide');
+          }, 750);
+        }
       });
     }
   });
@@ -100,8 +106,10 @@ if (Meteor.isServer) {
 
   Meteor.startup(function () {
 
-    facebookDetails = SecureData.findOne({name: 'facebookDetails'});
-    twitterDetails = SecureData.findOne({name: 'twitterDetails'});
+    facebookDetails = SecureData.findOne({name: 'facebookDetails'}).value;
+    twitterDetails = SecureData.findOne({name: 'twitterDetails'}).value;
+
+    console.log(facebookDetails, twitterDetails);
 
     Accounts.config({
       sendVerificationEmail: false,
@@ -114,10 +122,8 @@ if (Meteor.isServer) {
     Accounts.loginServiceConfiguration.remove({
       service: "twitter"
     });
-    if (Meteor.absoluteUrl().slice(0,22) !== "http://localhost:3000/") {
-      Accounts.loginServiceConfiguration.insert(facebookDetails);
-      Accounts.loginServiceConfiguration.insert(twitterDetails);
-    }
+    Accounts.loginServiceConfiguration.insert(facebookDetails);
+    Accounts.loginServiceConfiguration.insert(twitterDetails);
 
     Meteor.methods({
       userCreate: function(email) {
