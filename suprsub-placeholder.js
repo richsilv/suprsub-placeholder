@@ -14,7 +14,8 @@ if (Meteor.isClient) {
         autoplay: true,
         lazyLoad: true,
         loop: true,
-        onChanged: changedCallback
+        onChanged: changedCallback,
+        autoplaySpeed: 500
       });
     });
     (function(d,s,id) {

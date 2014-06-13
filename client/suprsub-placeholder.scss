@@ -204,10 +204,12 @@ $carousel-height: 450px;
 	height: 100%;
 	-webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 0px 1px inset;
 	box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 0px 1px inset;
+	color: white;
 }
 
-#moreInfo h3 {
-	color: #fff;
+#moreInfo h3, #moreInfo p, #moreInfo li {
+	color: white;
+	opacity: 0.75;
 }
 
 .socialHolder {
@@ -220,7 +222,7 @@ $carousel-height: 450px;
 }
 
 #contactBox .fn {
-	color: #fff;
+	/*color: #fff;*/
 }
 
 #contactBox a:link, #contactBox a:visited {
