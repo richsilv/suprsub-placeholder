@@ -1,12 +1,20 @@
 if (Meteor.isClient) {
 
+  function changedCallback(event) {
+    if (this && this.info) $(".carousel-holder .img>div").fadeTo(100, 0);
+    Meteor.setTimeout(function() {
+      $(".carousel-holder .img>div").fadeTo(500, 1);
+    }, 500);
+  }
+
   Meteor.startup(function() {
     $(document).ready(function() {
       $('.owl-carousel').owlCarousel({
         items: 1,
         autoplay: true,
         lazyLoad: true,
-        loop: true
+        loop: true,
+        onChanged: changedCallback
       });
     });
     (function(d,s,id) {

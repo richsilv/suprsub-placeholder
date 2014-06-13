@@ -65,6 +65,7 @@ body {
 
 $topbar-height: 45px;
 $darkgreen: hsl(120, 75%, 43%);
+$carousel-height: 450px;
 
 .broad.row {
 	margin-top: 5em;
@@ -106,7 +107,7 @@ $darkgreen: hsl(120, 75%, 43%);
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
-    height: 330px;
+    height: $carousel-height;
 	text-align: center;
 }
 
@@ -120,18 +121,44 @@ $darkgreen: hsl(120, 75%, 43%);
 	text-align: center;
 	font-size: 1.8em;
 	bottom: 0;
-	color: #47c8c8;
+	color: white;
+	/*color: #47c8c8;*/
 	text-shadow: 0 0 5px black;
 	position: relative;
 	display: inline-block;
 	background-color: rgba(22, 22, 22, 0.2);
 	padding: 0.2em 1em;
-	top: 120px;
+	top: $carousel-height/2.75;
 }
 
 .owl-carousel .signup {
 	position: relative;
-	top: 120px;
+	top: $carousel-height/2.75;
+}
+
+.carousel-holder .img>div {
+	opacity: 0;
+/*	transition: opacity 0.5s;
+	-moz-transition: opacity 0.5s;
+	-webkit-transition: opacity 0.5s;*/
+}
+
+.ui.darkgreen.buttons .button,
+.ui.darkgreen.button {
+  background-color: $darkgreen;
+  color: #FFFFFF;
+}
+.ui.darkgreen.buttons .button:hover,
+.ui.darkgreen.button:hover,
+.ui.darkgreen.buttons .active.button,
+.ui.darkgreen.button.active {
+  background-color: darken($darkgreen, 7%);
+  color: #FFFFFF;
+}
+.ui.darkgreen.buttons .button:active,
+.ui.darkgreen.button:active {
+  background-color: $darkgreen;
+  color: #FFFFFF;
 }
 
 .owl-carousel .caption.header {
@@ -149,17 +176,26 @@ $darkgreen: hsl(120, 75%, 43%);
 }
 
 .iconPic {
-	height: 200px;
+	/*height: 200px;*/
+	max-width: 100%;
+	max-height: 200px;
 	margin-left: auto;
 	margin-right: auto;
 	padding: 1em 0;
-	display: block;
+	display: inline;
+	vertical-align: middle;
 }
 
 .iconBox {
 	text-align: center;
 	color: rgb(34, 34, 34);
 	/*color: rgb(51, 51, 50);*/
+}
+
+.iconPicHolder {
+	height: 200px;
+	line-height: 200px;
+	position: relative;
 }
 
 #moreInfo {
@@ -366,10 +402,6 @@ $darkgreen: hsl(120, 75%, 43%);
 	color: white;
 }
 
-.darkgreen {
-  color: $darkgreen !important;
-}
-
 .darkgreenshadow {
 	text-shadow: 0 0 10px rgba(63, 255, 63, 0.4), 0 0 5px rgba(0, 0, 0, 0.1);
 }
@@ -413,7 +445,7 @@ i.suprsub.icon {
 }
 
 i.suprsub.icon:before{
-	content: "S";
+	content: "SuprSub";
 	font-family: "Collegiate";
 	font-size: 36.8px;
 }
