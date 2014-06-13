@@ -167,7 +167,7 @@ $carousel-height: 450px;
 	margin: 0.5em;
 }
 
-.icon {
+.icon:not('.input') {
 	width: 100px;
 	margin-left: auto;
 	margin-right: auto;
@@ -192,10 +192,37 @@ $carousel-height: 450px;
 	/*color: rgb(51, 51, 50);*/
 }
 
+.iconBox img.icon {
+	height: 95px;
+}
+
 .iconPicHolder {
 	height: 200px;
 	line-height: 200px;
 	position: relative;
+}
+
+.ui.button {
+	text-transform: none;
+}
+
+.ui.modal i.icon {
+	padding: 0;
+}
+
+.ui.form .subtext {
+	font-size: 0.6em;
+	margin: 1em;
+	line-height: 2em;
+	color: #555;
+}
+
+.columns .field:last-of-type {
+	margin-bottom: 0;
+}
+
+#signup-button {
+	margin-bottom: 0;
 }
 
 #moreInfo {
@@ -408,29 +435,29 @@ $carousel-height: 450px;
 	text-shadow: 0 0 10px rgba(63, 255, 63, 0.4), 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-.ui.darkgreen.active.item {
+.darkgreen.active.item {
   	border-color: $darkgreen !important;
   	color: $darkgreen !important;
 }
-.ui.inverted.darkgreen {
+.inverted.darkgreen {
   	background-color: $darkgreen;
 }
 .ui.inverted.darkgreen .active.item:after {
   	background-color: $darkgreen;
 }
-.ui.inverted.darkgreen {
+.inverted.darkgreen {
 	color: #ffffff;
 }
 
-.ui.menu .darkgreen.active.item,
-.ui.darkgreen.menu .active.item {
+.menu .darkgreen.active.item,
+.darkgreen.menu .active.item {
   border-color: $darkgreen !important;
   /*color: hsl(120, 75%, 43%) !important;*/
 }
-.ui.inverted.darkgreen.menu {
+.inverted.darkgreen.menu {
   background-color: $darkgreen;
 }
-.ui.inverted.darkgreen.pointing.menu .active.item:after {
+.inverted.darkgreen.pointing.menu .active.item:after {
   background-color: $darkgreen;
 }
 

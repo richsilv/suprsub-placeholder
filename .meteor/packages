@@ -10,3 +10,9 @@ owl-carousel
 zurb-foundation
 sass
 stellar
+semantic-ui
+accounts-base
+accounts-facebook
+accounts-twitter
+accounts-ui-unstyled
+accounts-password

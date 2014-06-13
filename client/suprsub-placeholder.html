@@ -37,33 +37,7 @@
 			<a href="#socialLinks">Connect</a>
 		</div>			
 	</div> -->
-	<div class="owl-carousel">
-		<div class="carousel-holder">
-		    <div style="background-image: url('/SplashPage3.jpg')" class="img">
-		    	<div class="caption header">PLAY MORE FOOTBALL</div><br><div class="caption">The best way to play more football</div>
-		    	<div class="signup" style="margin-top:2em;"><div class="ui darkgreen button">Sign Up Here</div></div>
-		   	</div>	
-		   	
-		</div>
-		<div class="carousel-holder">
-		    <div style="background-image: url('/SplashPage2.jpg')" class="img">
-		    	<div class="caption header">PLAY MORE FOOTBALL</div><br><div class="caption">Find a SuprSub in seconds if your team is short</div>
-		    	<div class="signup" style="margin-top:2em;"><div class="ui darkgreen button">Sign Up Here</div></div>
-		    </div>
-		</div>
-		<div class="carousel-holder">
-		    <div style="background-image: url('/SplashPage1.jpg')" class="img">
-			    <div class="caption header">PLAY MORE FOOTBALL</div><br><div class="caption">Be a SuprSub wherever and whenever suits you</div>
-		    	<div class="signup" style="margin-top:2em;"><div class="ui darkgreen button">Sign Up Here</div></div>
-		    </div>
-		</div>
-		<div class="carousel-holder">
-		    <div style="background-image: url('/SplashPage4.jpg')" class="img">
-			    <div class="caption header">PLAY MORE FOOTBALL</div><br><div class="caption">Launching soon - follow us on Twitter for the latest updates</div>
-		    	<div class="signup" style="margin-top:2em;"><div class="ui darkgreen button">Sign Up Here</div></div>
-		    </div>
-		</div>
-	</div>
+	{{> owlCarousel}}
 	<div class="broad row" id="threeInstructions">
 		<h2>What is SuprSub?</h2>
 		<div class="large-4 columns">
@@ -124,7 +98,8 @@
 			<div class="large-4 columns">
 				<h3>Connect</h3>
 				<div class="socialHolder" id="socialLinks">
-					<a href="https://twitter.com/suprsub" class="twitter-follow-button" data-width="148" data-show-count="false" data-lang="en" data-size="medium" data-dnt="true">Follow SuprSub</a>
+					<!-- <a href="https://twitter.com/suprsub" class="twitter-follow-button" data-width="148" data-lang="en" data-size="medium" data-dnt="true">Follow SuprSub</a> -->
+					<iframe allowtransparency="true" frameborder="0" scrolling="no" src="//platform.twitter.com/widgets/follow_button.html?screen_name=suprsub&show_count=false" style="width:300px; height:20px;"></iframe>
 				</div>
 				<div class="socialHolder">
 					<div class="fb-like" data-href="https://www.facebook.com/suprsub" data-width="148" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
@@ -132,14 +107,14 @@
 			</div>
 			<div class="large-4 columns">
 				<h3 id="aboutLinks">About</h3>
-				<p class="pageLink"><a href="#">Details</a></p>
-				<p class="pageLink"><a href="#">Timeline</a></p>
+				<p class="pageLink"><a href="/website-terms-and-conditions-suprsub.doc">Terms and Conditions</a></p>
+				<p class="pageLink"><a href="/website-privacy-policy-suprsub.doc">Privacy Policy</a></p>
 			</div>
 			<div class="large-4 columns">
 				<h3>Contact</h3>
 				<ul class="vcard" id="contactBox">
 					<li class="fn">SuprSub Ltd</li>
-					<li class="email"><a href="#">info@suprsub.com</a></li>
+					<li class="email"><a href="mailto:info@suprsub.com">info@suprsub.com</a></li>
 					<li>UK registered with Company No. <span class="fn">08857136</span></li>
 				</ul>
 			</div>
@@ -150,7 +125,7 @@
 </body>
 
 <template name="topbar">
-	<div class="ui darkgreen inverted main menu" id="topbar">
+	<div class="darkgreen inverted main menu" id="topbar">
 		<span class="item" href="{{pathFor 'home'}}">
 			<i class="white suprsub icon"></i>
 		</span>
@@ -243,4 +218,88 @@
 <template name="parallaxBox">
 	<div class="parallax show-for-medium-up"><div class="leafImage" data-stellar-background-ratio="0.5"></div></div>
 	<hr class="hide-for-medium-up">
+</template>
+
+<template name="owlCarousel">
+	<div class="owl-carousel">
+		<div class="carousel-holder">
+		    <div style="background-image: url('/SplashPage3.jpg')" class="img">
+		    	<div class="caption header">PLAY MORE FOOTBALL</div><br><div class="caption">The best way to play more football</div>
+		    	<div class="signup" style="margin-top:2em;"><div class="ui darkgreen button">Sign Up Here</div></div>
+		   	</div>	
+		   	
+		</div>
+		<div class="carousel-holder">
+		    <div style="background-image: url('/SplashPage2.jpg')" class="img">
+		    	<div class="caption header">PLAY MORE FOOTBALL</div><br><div class="caption">Find a SuprSub in seconds if your team is short</div>
+		    	<div class="signup" style="margin-top:2em;"><div class="ui darkgreen button">Sign Up Here</div></div>
+		    </div>
+		</div>
+		<div class="carousel-holder">
+		    <div style="background-image: url('/SplashPage1.jpg')" class="img">
+			    <div class="caption header">PLAY MORE FOOTBALL</div><br><div class="caption">Be a SuprSub wherever and whenever suits you</div>
+		    	<div class="signup" style="margin-top:2em;"><div class="ui darkgreen button">Sign Up Here</div></div>
+		    </div>
+		</div>
+		<div class="carousel-holder">
+		    <div style="background-image: url('/SplashPage4.jpg')" class="img">
+			    <div class="caption header">PLAY MORE FOOTBALL</div><br><div class="caption">Launching soon - follow us on Twitter for the latest updates</div>
+		    	<div class="signup" style="margin-top:2em;"><div class="ui darkgreen button">Sign Up Here</div></div>
+		    </div>
+		</div>
+	</div>
+</template>
+
+<template name="dynamicTemplate">
+  {{#with chooseTemplate name}}
+    {{> template}}
+  {{/with}}
+</template>
+
+<template name="modalHolder">
+	<div class="ui small modal">
+	{{> dynamicTemplate name=modalTemplate}}
+	</div>
+</template>
+
+<template name="signupModalHolder">
+	<div class="ui small modal">
+	{{> signupModal}}
+	</div>
+</template>
+
+<template name="signupModal">
+	  <i class="close icon"></i>
+<!-- 	  <div class="header">
+	    Header
+	  </div> -->
+	  <div class="ui form content">
+	  	<div class="medium-6 columns">
+			<div class="fluid ui button facebook field" id="facebook-login">
+				<i class="facebook icon"></i>
+				Sign up with Facebook
+			</div>
+			<div class="fluid ui button twitter field" id="twitter-login">
+				<i class="twitter icon"></i>
+				Sign up with Twitter
+			</div>
+	  	</div>
+		<div class="show-for-medium-up"><div class="ui vertical divider">
+		    Or
+		</div></div>
+		<div class="hide-for-medium-up ui fluid field"></div>
+	  	<div class="medium-6 columns">
+			<div class="ui field" style="overflow: hidden;">
+				<div class="ui left labeled icon input">
+					<input type="email" placeholder="E-Mail" id="signup-email" style="height: 37px; transition: color 0.75s">
+					<i class="inbox icon"></i>
+					<div class="ui corner label">
+						<i class="icon asterisk"></i>
+					</div>
+				</div>
+			</div>
+			<div class="ui darkgreen button field" id="signup-button" style="float: right;">Sign Up</div>
+			<div class="subtext">By clicking "Sign Up", you agree to our <a href="/website-terms-and-conditions-suprsub.doc">Terms and Conditions</a>. <br>View our <a href="website-privacy-policy-suprsub.doc">Privacy Policy</a>.</div>
+		</div>
+	  </div>
 </template>
