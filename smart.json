@@ -1,5 +1,7 @@
 {
   "packages": {
-    "semantic-ui": {}
+    "semantic-ui": {},
+    "sass": {},
+    "stellar": {}
   }
 }

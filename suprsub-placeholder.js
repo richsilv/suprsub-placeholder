@@ -2,7 +2,12 @@ if (Meteor.isClient) {
 
   Meteor.startup(function() {
     $(document).ready(function() {
-      $('.owl-carousel').owlCarousel({items: 1});
+      $('.owl-carousel').owlCarousel({
+        items: 1,
+        autoplay: true,
+        lazyLoad: true,
+        loop: true
+      });
     });
     (function(d,s,id) {
       var js,fjs=d.getElementsByTagName(s)[0];
@@ -20,6 +25,10 @@ if (Meteor.isClient) {
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
   });
+
+  Template.parallaxBox.rendered = function() {
+    $.stellar();
+  }
 }
 
 if (Meteor.isServer) {

@@ -2,13 +2,25 @@
   "meteor": {},
   "dependencies": {
     "basePackages": {
-      "semantic-ui": {}
+      "semantic-ui": {},
+      "sass": {},
+      "stellar": {}
     },
     "packages": {
       "semantic-ui": {
         "git": "https://github.com/nooitaf/meteor-semantic-ui.git",
-        "tag": "v0.17.0",
-        "commit": "820b4a05267733aa8124ba6ebc5b88eaf93361c4"
+        "tag": "v0.18.0",
+        "commit": "a27035712167b248366a7719399a2257513530ee"
+      },
+      "sass": {
+        "git": "https://github.com/particle4dev/meteor-sass.git",
+        "tag": "v0.1.4",
+        "commit": "7f43b08e9726c953bbbda5974d09cfca89f45086"
+      },
+      "stellar": {
+        "git": "https://github.com/noorderstorm/meteor-stellar.git",
+        "tag": "v0.1.0",
+        "commit": "1ca2f68e0cca5967a6f88545cea12055c9fc2465"
       }
     }
   }
