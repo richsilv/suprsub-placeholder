@@ -2,6 +2,7 @@
   "packages": {
     "sass": {},
     "stellar": {},
-    "semantic-ui": {}
+    "semantic-ui": {},
+    "jquery.transit": {}
   }
 }

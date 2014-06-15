@@ -1,9 +1,11 @@
 if (Meteor.isClient) {
 
+  if (!$.support.transition) $.fn.transition = $.fn.animate;
+
   function changedCallback(event) {
-    if (this && this.info) $(".carousel-holder .img>div").fadeTo(100, 0);
+    if (this && this.info) $(".carousel-holder .img>div").transition({opacity: 0, duration: 100});
     Meteor.setTimeout(function() {
-      $(".carousel-holder .img>div").fadeTo(500, 1);
+      $(".carousel-holder .img>div").transition({opacity: 1, duration: 500});
     }, 500);
   }
 
@@ -33,6 +35,13 @@ if (Meteor.isClient) {
   });
 
   Template.parallaxBox.rendered = function() {
+    var docHeight = $(document).height(), windowHeight = $(window).height();
+    console.log(docHeight, windowHeight);
+    if (docHeight > windowHeight + 100) {
+      $('.leafImage').attr('data-stellar-background-ratio', 1 + ( 200 / ( docHeight - windowHeight ) ) );
+    }
+    else
+      $('.leafImage').attr('data-stellar-background-ratio', 0.5);
     $.stellar();
   };
 
@@ -86,7 +95,7 @@ if (Meteor.isClient) {
     if (data)
       UI.insert(UI.renderWithData(template, data), document.body);
     else
-      UI.insert(UI.render(template), document.body);
+      UI.insert(UI.render(temlate), document.body);
     return callback && callback.apply(this, arguments);
   };
 }
@@ -108,8 +117,6 @@ if (Meteor.isServer) {
 
     facebookDetails = SecureData.findOne({name: 'facebookDetails'}).value;
     twitterDetails = SecureData.findOne({name: 'twitterDetails'}).value;
-
-    console.log(facebookDetails, twitterDetails);
 
     Accounts.config({
       sendVerificationEmail: false,
