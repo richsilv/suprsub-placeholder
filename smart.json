@@ -3,6 +3,8 @@
     "sass": {},
     "stellar": {},
     "semantic-ui": {},
-    "jquery.transit": {}
+    "jquery.transit": {},
+    "server-eval": {},
+    "geocoder": {}
   }
 }

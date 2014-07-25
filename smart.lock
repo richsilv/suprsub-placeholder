@@ -5,7 +5,9 @@
       "sass": {},
       "stellar": {},
       "semantic-ui": {},
-      "jquery.transit": {}
+      "jquery.transit": {},
+      "server-eval": {},
+      "geocoder": {}
     },
     "packages": {
       "sass": {
@@ -20,13 +22,23 @@
       },
       "semantic-ui": {
         "git": "https://github.com/nooitaf/meteor-semantic-ui.git",
-        "tag": "v0.18.0",
-        "commit": "a27035712167b248366a7719399a2257513530ee"
+        "tag": "v0.19.0",
+        "commit": "23ddf7b58db125cc33d0d95d58fcac940f262481"
       },
       "jquery.transit": {
         "git": "https://github.com/noorderstorm/meteor-jquery-transit.git",
         "tag": "v0.1.0",
         "commit": "d3b8a4149ab40b14b125edd473c3850177895fb5"
+      },
+      "server-eval": {
+        "git": "https://github.com/gandev-de/meteor-server-eval.git",
+        "tag": "v0.5.0",
+        "commit": "0652e70de0b359305f7e04b9131dfc755e1cf27a"
+      },
+      "geocoder": {
+        "git": "https://github.com/aldeed/meteor-geocoder.git",
+        "tag": "v0.2.0",
+        "commit": "788b7eb97b3a481ca1d298bc2849fa6b624412f9"
       }
     }
   }

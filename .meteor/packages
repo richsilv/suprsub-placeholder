@@ -17,3 +17,5 @@ accounts-twitter
 accounts-ui-unstyled
 accounts-password
 jquery.transit
+server-eval
+geocoder
